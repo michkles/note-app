@@ -1,4 +1,4 @@
-(function(exports){
+(function(exports) {
   function NoteList(note){
     this.notes = [note];
   };
@@ -7,6 +7,6 @@
     return this.notes;
   };
 
-exports.NoteList = NoteList;
-exports.returnNotes = returnNotes;
+  exports.NoteList = NoteList;
+  exports.returnNotes = this.returnNotes;
 })(this);
