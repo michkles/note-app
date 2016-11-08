@@ -1,28 +1,6 @@
-function testNoteModel(){
-  var testNote= new Note("My favourite language is JavaScript");
-  if (testNote.returnText() != "My favourite language is JavaScript") {
-    throw new Error ("Text is not there");
-  } else {
-    console.log("Success : " + testNote.returnText());
-  }
+function testNoteModel(string){
+  var testNote = new Note(string);
+  assert.isTrue(testNote.returnText() === string);
 }
 
-testNoteModel();
-
-
-// var assert = {
-//   isTrue: function(assertionToCheck){
-//     if(!assertionToCheck){
-//       throw new Error("Assertion failed: " + assertionToCheck + " is NOT truthy");
-//     } else {
-//       console.log("Assertion passed: " + assertionToCheck + " IS truthy");
-//     }
-//   }
-// }
-//
-// function testNoteModel(){
-//   var testNote = new Note("My favourite language is not js.");
-//   assert.isTrue(testNote.returnText() === "My favourite language is not js.");
-// }
-//
-// testNoteModel();
+testNoteModel("JavaScript is confusing! :/");
