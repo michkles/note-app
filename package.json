@@ -9,16 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/michkles/note-app.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/michkles/note-app/issues"
-  },
-  "homepage": "https://github.com/michkles/note-app#readme",
   "dependencies": {
     "http-server": "^0.9.0"
   }
