@@ -6,9 +6,11 @@ function testNoteListViewInstantiation() {
 
 function testNoteListViewReturningHtml() {
   var noteList = new NoteList();
-  noteList.newNote('Favourite beer: Heineken');
-  noteList.newNote('Favourite editor: Vim');
   var noteListView = new NoteListView(noteList);
+  assert.isTrue( noteListView.printHtml() === "<ul></ul>");
+  noteList.newNote('Favourite beer: Heineken');
+  assert.isTrue( noteListView.printHtml() === "<ul><li><div>Favourite beer: Heineken</div></li></ul>");
+  noteList.newNote('Favourite editor: Vim');
   assert.isTrue( noteListView.printHtml() === "<ul><li><div>Favourite beer: Heineken</div></li><li><div>Favourite editor: Vim</div></li></ul>");
 }
 
