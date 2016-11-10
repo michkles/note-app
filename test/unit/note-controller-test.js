@@ -4,8 +4,15 @@ function testNoteControllerInstantiation(){
 }
 
 function testNoteControllerHTML(){
-  var controller = new NoteController();
-  controller.newNote('I like rum');
+  var list = new NoteList();
+  var controller = new NoteController(list);
+  controller.newNote("I need to buy beer");
+  controller.printHtml();
+  var expectedHtml = "<ul><li><div>I need to buy beer</div></li></ul>";
+  view = new NoteListView(list);
+  view.printHtml();
+  assert.isTrue( expectedHtml === view.printHtml());
 }
 
 testNoteControllerInstantiation();
+testNoteControllerHTML();
