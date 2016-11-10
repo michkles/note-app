@@ -1,17 +1,17 @@
 function testNoteControllerInstantiation(){
-    var controller = new NoteController();
-    assert.isTrue(controller instanceof NoteController);
+    var controller2 = new NoteController();
+    assert.isTrue(controller2 instanceof NoteController);
 }
 
 function testNoteControllerHTML(){
-  var list = new NoteList();
-  var controller = new NoteController(list);
-  controller.newNote("I need to buy beer");
-  controller.printHtml();
-  var expectedHtml = "<ul><li><div>I need to buy beer</div></li></ul>";
-  view = new NoteListView(list);
-  view.printHtml();
-  assert.isTrue( expectedHtml === view.printHtml());
+  var list2 = new NoteList();
+  var notecontroller = new NoteController(list2);
+  notecontroller.newNote("I need to buy food");
+  //notecontroller.printHtml();
+  var expectedHtml = "<ul><li><div>I need to buy food</div></li></ul>";
+  view2 = new NoteListView(list2);
+  view2.printHtml();
+  assert.isTrue( expectedHtml === view2.printHtml());
 }
 
 testNoteControllerInstantiation();

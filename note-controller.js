@@ -5,7 +5,7 @@
 (function(exports) {
 
     function NoteController(notelist) {
-      this.noteList = notelist || new NoteList();
+      this.noteList = notelist;
       this.view = new NoteListView(notelist);
     }
 
